@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+
+enum ImageUploadStatusCode {
+    Ok = 0;
+    Failed = 1;
+    Unknown = 2;
+    InProgress = 3;
+}
+
+message ImageUploadRequest {
+    bytes Content = 1;
+    string Id = 2;
+    ImageUploadStatusCode StatusCode = 3;
+}
+
+message ImageUploadResponse {
+    string Id = 1;
+    ImageUploadStatusCode StatusCode = 2;
+    string Message = 3;
+}
+
+service ImageService {
+    rpc Upload (stream ImageUploadRequest) returns (ImageUploadResponse) {};
+}

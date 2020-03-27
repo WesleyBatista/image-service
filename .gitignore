@@ -1,0 +1,4 @@
+.env
+*pb2*
+.vscode
+__pycache__
