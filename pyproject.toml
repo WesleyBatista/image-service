@@ -9,7 +9,7 @@ python = "^3.7"
 grpcio = "^1.27.2"
 google-api-core = "^1.16.0"
 flask = "^1.1.1"
-protobuf = "^3.11.3"
+protobuf = "^3.18.3"
 
 [tool.poetry.dev-dependencies]
 
